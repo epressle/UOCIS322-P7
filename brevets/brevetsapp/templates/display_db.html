@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Saved Times</title>
+    </head>
+    <body>
+        <div>
+            <h1><u>Saved Times</u></h1>
+            {% for item in saved %}
+                <h2>Brevet distance: {{ item.brev_distance }}</h2>
+                <!-- since we have kms, open_times and close_times as arrays, we have to go through them indexwise -->
+                {% for i in range(item.kms | length) %}
+                <p>KM: {{ item.kms[i] }}, Open time: {{ item.open_times[i] }}, Close time: {{ item.close_times[i] }}</p>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </body>
+</html>

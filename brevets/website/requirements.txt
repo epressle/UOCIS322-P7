@@ -1,0 +1,6 @@
+Flask==1.1.2
+requests==2.23.0
+Flask_Login==0.5.0
+WTForms==2.3.3
+Flask_WTF==0.15.1
+passlib==1.7.1

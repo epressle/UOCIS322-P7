@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+	<h1>
+		{% if current_user.is_authenticated %}
+		Welcome, {{ current_user.username }}!
+		<h2>
+			<br></br>
+			<a href="/entries" class="button">Go to database retrieval page</a>
+			<br></br>
+			<a href="/logout" class="button">Log out</a>
+		</h2>
+		{% else %}
+		<h2>You must sign in or register to access the features of this webpage.</h2>
+		{% endif %}
+	</h1>
+</div>
+{% endblock %}

@@ -18,6 +18,17 @@
 					{% endfor %}
 				</ul>
 				{% endif %}
+
+				<label class="form-check-label" for="passwordBox">{{ form.password.label }}</label>
+				{{ form.password(size=32, class="form-control", id="passwordBox") }}
+				<!-- <input type="text" class="form-control" placeholder="Username" aria-label="Username" name="username"> -->
+				{% if form.password.errors %}
+				<ul class="errors">
+					{% for error in form.password.errors %}
+					<li>{{ error }}</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
 			</div>
 			<div class="form-check form-switch">
 				<input class="form-check-input" type="checkbox" id="rememberMeCheck" name="remember" value="true">
